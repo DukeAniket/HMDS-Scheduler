@@ -12,7 +12,7 @@ pred = pftRankres[5]
 succ = pftRankres[6]
 c = pftRankres[7]
 w = pftRankres[8]
-das = graph.getDAS()
+das = graph.getDAG()
 tEntry = 0
 
 AST = [0]*numTasks
