@@ -10,18 +10,18 @@ setup.py
 pft_rank.py
 HMDS_Bl.py
 
-setup.py --> deals with inputs of various requirements, organizing tasks into a Directed Acyclic Graph, and finding predecessors and successors of various      tasks.
+setup.py --> deals with inputs of various requirements, organizing tasks into a Directed Acyclic Graph, and finding predecessors and successors of various tasks.
 
-pft_rank --> returns PFT (Predicted Finish Time) and rank (which is average of PFTs on all processors).
-             PFT is a 2D matrix of form |V| X |P|
-             rank is a list of length |V|
+pft_rank --> returns PFT (Predicted Finish Time) and rank (which is average of PFTs on all processors). ;
+             PFT is a 2D matrix of form |V| X |P| ;
+             rank is a list of length |V| ;
              
-HMDS_Bl.py --> uses PFT and rank.
-               sort tasks in non-increasing order of rank.
-               get each task
-               compute EST, EFT, O_eft
-               EST --> Effective Start Time --> of form |V| X |P|
-               EFT --> Effective Finish Time --> of form |V| X |P|
-               O_eft --> Estimate of Sink Task's completion time (T_Exit completion time) relative to the EFTof current task on a particular processor. --> of form |V| X |P|.
-               find Processor pn with minimum O_eft.
-               assign that task to the processor pn.
+HMDS_Bl.py --> uses PFT and rank. ;
+               sort tasks in non-increasing order of rank. ;
+               get each task ;
+               compute EST, EFT, O_eft ;
+               EST --> Effective Start Time --> of form |V| X |P| ;
+               EFT --> Effective Finish Time --> of form |V| X |P| ;
+               O_eft --> Estimate of Sink Task's completion time (T_Exit completion time) relative to the EFTof current task on a particular processor. --> of form |V| X |P|. ;
+               find Processor pn with minimum O_eft. ;
+               assign that task to the processor pn. ;
