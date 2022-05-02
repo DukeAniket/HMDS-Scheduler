@@ -22,6 +22,7 @@ allot = [0]*numTasks
 
 s = numpy.array(rank)
 taskList = numpy.argsort(s)
+taskList.reverse()
 
 EST = [[0]*procrs]*numTasks
 EFT = [[0]*procrs]*numTasks
